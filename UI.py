@@ -19,9 +19,15 @@ class Ui_Form(object):
         self.verticalLayout.setObjectName("verticalLayout")
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
         self.pushButton = QtWidgets.QPushButton(Form)
         self.pushButton.setObjectName("pushButton")
-        self.verticalLayout.addWidget(self.pushButton)
+        self.horizontalLayout.addWidget(self.pushButton)
+        self.pushButton_2 = QtWidgets.QPushButton(Form)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.horizontalLayout.addWidget(self.pushButton_2)
+        self.verticalLayout.addLayout(self.horizontalLayout)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -29,4 +35,5 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.pushButton.setText(_translate("Form", "Круг"))
+        self.pushButton.setText(_translate("Form", "Желтый"))
+        self.pushButton_2.setText(_translate("Form", "Случайный"))
